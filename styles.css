@@ -1,0 +1,51 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #140739;
+}
+
+.slider-container {
+  position: relative;
+  width: 150px;
+  height: 30px;
+  background-color: #e90c0c;
+  border-radius: 30px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.slider-label {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+}
+
+.slider-circle {
+  position: absolute;
+  background-color: white;
+  border-radius: 100%;
+  width: 26px;
+  height: 26px;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+.slider-container.on {
+  background-color: #09e110;
+}
+
+.slider-container.on .slider-circle {
+  transform: translateX(120px);
+}
+
+.slider-container.on #sliderLabel {
+  content: "On";
+}
